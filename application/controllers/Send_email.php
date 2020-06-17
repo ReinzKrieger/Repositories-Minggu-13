@@ -16,8 +16,8 @@ class Send_email extends CI_Controller
             'charset'   => 'utf-8',
             'protocol'  => 'smtp',
             'smtp_host' => 'smtp.gmail.com',
-            'smtp_user' => 'email@gmail.com',  // Email gmail
-            'smtp_pass'   => 'passwordgmail',  // Password gmail
+            'smtp_user' => 'hinellia90@gmail.com',  // Email gmail
+            'smtp_pass'   => 'fahmiihza123',  // Password gmail
             'smtp_crypto' => 'ssl',
             'smtp_port'   => 465,
             'crlf'    => "\r\n",
@@ -28,19 +28,19 @@ class Send_email extends CI_Controller
         $this->load->library('email', $config);
 
         // Email dan nama pengirim
-        $this->email->from('no-reply@masrud.com', 'MasRud.com');
+        $this->email->from('no-reply@ReinzKrieger.net', 'ReinzKrieger.net');
 
         // Email penerima
-        $this->email->to('penerima@domain.com'); // Ganti dengan email tujuan
+        $this->email->to('famztrooper90@gmail.com'); // Ganti dengan email tujuan
 
         // Lampiran email, isi dengan url/path file
-        $this->email->attach('https://masrud.com/content/images/20181215150137-codeigniter-smtp-gmail.png');
+        //$this->email->attach('https://masrud.com/content/images/20181215150137-codeigniter-smtp-gmail.png');
 
         // Subject email
-        $this->email->subject('Kirim Email dengan SMTP Gmail CodeIgniter | MasRud.com');
+        $this->email->subject('Kirim Email dengan SMTP Gmail CodeIgniter | Reinz Krieger');
 
         // Isi email
-        $this->email->message("Ini adalah contoh email yang dikirim menggunakan SMTP Gmail pada CodeIgniter.<br><br> Klik <strong><a href='https://masrud.com/post/kirim-email-dengan-smtp-gmail' target='_blank' rel='noopener'>disini</a></strong> untuk melihat tutorialnya.");
+        $this->email->message("Ini adalah contoh email yang dikirim menggunakan SMTP Gmail pada CodeIgniter.<br><br> Klik <strong><a href='https://github.com/ReinzKrieger/Repositories-Minggu-13' target='_blank' rel='noopener'>disini</a></strong> untuk melihat tutorialnya.");
 
         // Tampilkan pesan sukses atau error
         if ($this->email->send()) {
